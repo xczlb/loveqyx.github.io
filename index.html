@@ -98,47 +98,6 @@ https://010818.xyz
 				</section>
 			</div>
         <div>
-	<center>
-	<p><span id="showuser1"></span><span id="ip1"></span><span id="province1"></span><span id="city1"></span><span id="isp1"></span><span id="end"></span></p>
-	                        <script>
-		                        // 使用免费的ipify API获取访客的IP地址
-		                        fetch('https://api.ipify.org/?format=json')
-			                        .then(response => response.json())
-			                        .then(data => {
-			                                let ip_add = data.ip;
-			                                let url_get="https://www.fkcoder.com/ip?ip=";
-			                                let url_add=url_get+ip_add;
-						        document.getElementById('showuser1').textContent = "欢迎来自:";
-				                        document.getElementById('ip1').textContent = data.ip;
-	                                                document.getElementById('end').textContent = "的用户";
-			                                // 使用免费的API获取访客的归属地
-			                                fetch(url_add)
-			                                .then(response => response.json())
-			                                .then(data => {
-                                                        if(data.province!='0'){
-			                                document.getElementById('province1').textContent = data.province;
-                                      }
-                                                        if(data.city!='0'){
-			                                document.getElementById('city1').textContent = data.city;
-                                      }
-                                                        if(data.isp!='0'){
-			                                document.getElementById('isp1').textContent = data.isp;
-                                      }
-			                                })
-			                        .catch(error => console.error(error));
-			                        })
-			                        .catch(error => console.error(error));
-					         setTimeout(function() {
-                                                 document.getElementById('showuser1').textContent = "";
-			                         document.getElementById('ip1').textContent ="";
-                                                 document.getElementById('province1').textContent = "";
-			                         document.getElementById('city1').textContent ="";
-                                                 document.getElementById('isp1').textContent = "";
-			                         document.getElementById('end').textContent ="";
-                       }, 5000);
-	                        </script>
-	</center>
-	</div>
 	      <div style="position: fixed;bottom: 0px;width: 100%;">
                         <center>
 			<a href="https://ipw.cn/ipv6webcheck/?site=010818.xyz" title="本站支持IPv6访问" target='_blank'>
