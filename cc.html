@@ -1,0 +1,129 @@
+<!-- 
+最后修改：Hhy
+https://010818.xyz 
+时间:2023-05-07 版权所有，请勿删除 
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="Cache-Control" content="no-siteapp">
+		<title>雨欣搜索</title>
+		<meta name="author" content="ZhangDi" />
+		<meta name="description" content="极简多引擎主页，提供聚合搜索框和网址导航。百度搜索、必应搜索、谷歌搜索等众多搜索平台！同时友情链接指向热门网站，如ChatGPT在线版等" />
+		<meta name="keywords" content="简洁搜索,极简搜索,简洁导航,免费chatGPT,在线chatGPT,Github,Kaggle,机器学习,人工智能,chatGPT4" />
+		<link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+		<link rel="icon" href="img/search.png" sizes="192x192" />
+		<link rel="apple-touch-icon-precomposed" href="img/search.png" />
+		<meta name="msapplication-TileImage" content="img/search.png" />
+		<link rel="shortcut icon" href="img/search.png" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="full-screen" content="yes">
+		<!--UC强制全屏-->
+		<meta name="browsermode" content="application">
+		<!--UC应用模式-->
+		<meta name="x5-fullscreen" content="true">
+		<!--QQ强制全屏-->
+		<meta name="x5-page-mode" content="app">
+		<!--QQ应用模式-->
+		<link href="font/embed.css" rel="stylesheet">
+		<link href="css/style.min.css" rel="stylesheet">
+		<script src="https://at.alicdn.com/t/font_1592760_ia4zj4yyia.js"></script>
+		<script src="https://at.alicdn.com/t/font_1592665_qtxgsonaqvd.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+		<script src="js/sou.min.js"></script>
+		<link rel="shortcut icon" href="img/logo.ico" />
+		<link rel="stylesheet" href="css/search.min.css" />
+		<!--不蒜子统计-->
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+                </script>
+		<!--微软统计-->
+		<!-- Clarity tracking code for https://qyx.one/ -->
+		<script>
+			(function(c,l,a,r,i,t,y){
+				c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+				t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+				y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+			})(window, document, "clarity", "script", "grki5qkmz1");
+		</script>
+    <!-- 用于传参 -->
+    <script>
+    var url = document.location.toString();//获取url地址
+    var urlParmStr = url.slice(url.indexOf('?')+1);//获取问号后所有的字符串
+    var ques=urlParmstr.split('=')[1];//获取等号后的所有参数
+    var new_url="https://cn.bing.com/search?q="+ques;
+    window.open(new_url, "_self");
+    </script>
+		
+        </head>
+	
+	<body>
+		<div id="menu"><i></i></div>
+		<div class="list closed">
+			<ul>
+			</ul>
+		</div>
+		<div id="content">
+			<div class="con">
+				<div class="shlogo">
+					<div class="logo-text embed">&nbsp;&nbsp;</div>
+				</div>
+				<section class="sousuo">
+					<div class="search">
+						<div class="search-box">
+							<svg class="icon" id="search-icon" aria-hidden="true">
+								<use xlink:href="#icon-baidu"></use>
+							</svg>
+							<input type="text" id="txt" class="search-input" autocomplete="off" autofocus="autofocus" placeholder="谷歌搜索" />
+							<svg class="icon" aria-hidden="true" id="search-clear" style="display: none;">
+								<use xlink:href="#icon-shanchu"></use>
+							</svg>
+							<svg class="icon" aria-hidden="true" id="search-enter">
+								<use xlink:href="#icon-enter"></use>
+							</svg>
+						</div>
+						<!-- 搜索热词 -->
+						<div class="box search-hot-text" id="box" style="display: none;">
+							<ul></ul>
+						</div>
+						<!-- 搜索引擎 -->
+						<div class="search-engine" style="display: none;">
+							<div class="search-engine-head">
+								<strong class="search-engine-tit">选择您的默认搜索引擎：</strong>
+								<div class="search-engine-tool">搜索热词：
+									<label class="switch">
+										<input id="hot-btn" type="checkbox">
+										<div class="slider round"></div>
+									</label>
+								</div>
+							</div>
+							<ul class="search-engine-list"></ul>
+						</div>
+					</div>
+				</section>
+			</div>
+	<div style="position: fixed;bottom: 0px;width: 100%;">
+		<center>
+		©2021-2023 
+		<a href="https://qyx.one" target="_blank" class="embed">
+		<img src="img/search.png" style="height: 13px;">雨欣导航 
+		</a>
+                <a href="https://myssl.com/seal/detail?domain=010818.xyz" title="MySSL安全签章" target='_blank'>
+			<img style="width: 50px; height: auto; cursor: pointer" MySSL 安全签章" src="https://sealres.myssl.com/seal/img/1x/seal.png?domain=010818.xyz">
+		</a>
+		All rights reserved.
+		<br>
+		</center>
+	</div>        
+	</body>
+	<script src=" ./js/search.min.js"> </script>
+	<script src=" ./js/jsonload.js"> </script>
+</html>
+<!-- 
+最后修改：Hhy
+https://010818.xyz 
+时间:2023-05-07 版权所有，请勿删除 
+-->
