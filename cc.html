@@ -13,7 +13,7 @@ https://010818.xyz
     var urlParmStr = url.slice(url.indexOf('?')+1);//获取问号后所有的字符串
     var ques=urlParmstr.split('=')[1];//获取等号后的所有参数
     var new_url="https://cn.bing.com/search?q="+ques;
-    window.open(new_url, "_self");
+    window.location.href=new_url;
     </script>	
         </head>
 	<div style="position: fixed;bottom: 0px;width: 100%;">
